@@ -1,0 +1,42 @@
+Html Webpack Plugin:
+<pre>
+  Error: html-webpack-plugin could not minify the generated output.
+  In production mode the html minifcation is enabled by default.
+  If you are not generating a valid html output please disable it manually.
+  You can do so by adding the following setting to your HtmlWebpackPlugin config:
+  |
+  |    minify: false
+  |
+  See https://github.com/jantimon/html-webpack-plugin#options for details.
+  For parser dedicated bugs please create an issue here:
+  https://danielruf.github.io/html-minifier-terser/
+  Parse Error: <header class="Header" id"header">
+              <section id="content">
+                  <div class="loading">
+                      <p> esto es un leyenda</p>
+                  </div>
+              </section>
+          </header>
+      </main>
+  <script src="main.js"></script></body>
+  </html>
+  
+  - htmlparser.js:244 new HTMLParser
+    [rick-morty]/[html-minifier-terser]/src/htmlparser.js:244:13
+  
+  - htmlminifier.js:993 minify
+    [rick-morty]/[html-minifier-terser]/src/htmlminifier.js:993:3
+  
+  - htmlminifier.js:1354 Object.exports.minify
+    [rick-morty]/[html-minifier-terser]/src/htmlminifier.js:1354:16
+  
+  - index.js:1019 HtmlWebpackPlugin.minifyHtml
+    [rick-morty]/[html-webpack-plugin]/index.js:1019:46
+  
+  - index.js:435 HtmlWebpackPlugin.postProcessHtml
+    [rick-morty]/[html-webpack-plugin]/index.js:435:40
+  
+  - index.js:260 
+    [rick-morty]/[html-webpack-plugin]/index.js:260:25
+  
+</pre>
